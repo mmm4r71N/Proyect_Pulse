@@ -1,0 +1,169 @@
+body {
+    font-family: 'Rockwell';
+    background-image: url('../img/registerbackground.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center; /* Centrar el contenedor principal horizontalmente */
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilos para las secciones principales */
+.seleccion-usuario, .registro-formulario, .mensaje-confirmacion {
+    padding: 35px; /* Tamaño intermedio del padding */
+    border-radius: 10px; /* Radio del borde intermedio */
+    width: 550px; /* Tamaño intermedio del ancho */
+    text-align: center;
+    margin-right: 450px ; /* Ajustado a un punto intermedio */
+    margin-top: 20px; /* Tamaño intermedio del margen superior */
+}
+
+/* Estilos para los títulos en las secciones */
+.seleccion-usuario h1, .registro-formulario h1, .mensaje-confirmacion h1 {
+    margin-bottom: 14px; /* Margen inferior intermedio */
+    color: white;
+    font-size: 27px; /* Tamaño de fuente intermedio */
+}
+
+/* Estilos para el formulario en dos columnas */
+.registro-formulario form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+    gap: 16px; /* Espacio intermedio entre columnas */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+/* Estilos para los campos de entrada en el formulario de registro */
+.registro-formulario input[type="text"],
+.registro-formulario input[type="email"],
+.registro-formulario input[type="password"],
+.registro-formulario input[type="date"],
+.registro-formulario select,
+.registro-formulario textarea {
+    width: 100%;
+    height: 40px; /* Altura intermedia de los campos de entrada */
+    padding: 10px; /* Padding intermedio */
+    margin-bottom: 0; /* Elimina el margen inferior para adaptarse a la cuadrícula */
+    border: none;
+    border-bottom: 1.5px solid white; /* Grosor intermedio del borde inferior */
+    background-color: transparent;
+    color: white;
+    font-size: 15px; /* Tamaño de fuente intermedio */
+    box-sizing: border-box;
+    transition: border-bottom-color 0.3s ease;
+}
+
+/* Estilos para el borde y sombra al enfocar los campos */
+.registro-formulario input[type="text"]:focus,
+.registro-formulario input[type="email"]:focus,
+.registro-formulario input[type="password"]:focus,
+.registro-formulario input[type="date"]:focus {
+    border-bottom-color: #ffffff;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Estilos para las etiquetas (labels) en el formulario */
+.registro-formulario label {
+    display: block;
+    margin-bottom: 10px; /* Margen inferior intermedio */
+    color: white;
+    font-size: 17.5px; /* Tamaño de fuente intermedio */
+    text-align: left;
+}
+
+/* Estilos para el párrafo (mensaje) en el formulario */
+.registro-formulario p {
+    color: white;
+    font-size: 15px; /* Tamaño de fuente intermedio */
+}
+
+/* Estilos para los enlaces dentro de los párrafos en el formulario */
+.registro-formulario p, a {
+    text-decoration: none;
+    color: white;
+    font-size: 17.5px;
+}
+
+/* Asegurar que algunos elementos ocupen ambas columnas */
+.registro-formulario .full-width {
+    grid-column: span 2;
+}
+
+/* Estilos para los botones de radio */
+.radio-buttons {
+    background-color: #006DA5;
+    color: #fff;
+    padding: 14px 18px; 
+    margin: 0;
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    font-family: 'Rockwell', sans-serif;
+    font-size: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.radio-buttons:checked {
+    background-color: #003f6b;
+}
+
+/* Estilos para el estado hover de los botones de radio */
+.radio-buttons:hover {
+    background-color: #00578d;
+}
+
+/* Estilos para el estado focus de los botones de radio */
+.radio-buttons:focus {
+    outline: none; /* Quita el contorno al enfocar */
+}
+
+
+/*------------------------------------------NAV--------------------------------------*/
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-logo {
+    height: 75px;
+    transition: transform 0.3s ease;
+    padding-left: 20px;
+}
+
+.nav-logo:hover {
+    transform: scale(1.2);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 0;
+    padding-right: 100px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #bee7ff;    
+}

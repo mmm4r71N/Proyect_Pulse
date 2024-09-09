@@ -1,0 +1,63 @@
+body {
+  font-family: 'Rockwell', sans-serif;
+  background-image: url('../img/registerbackground.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container{
+  color:white;  
+  padding: 100px; 
+  border-radius: 5px;
+  box-shadow: 0px 0px -5000px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  text-align: left;
+  font-family: 'Rockwell', serif; 
+  font-size: 60px;
+}
+
+p{
+  font-size: 15px;
+  font-family: 'Rockwell', serif;
+}
+
+p, form {
+  text-align: left;
+}
+.radio-buttons {
+  display: flex;
+  gap: 20px; /* Aumenta el espacio entre los botones */
+  align-items: center;
+}
+
+.radio-buttons button {
+  background-color: #006DA5;
+  color: #fff;
+  padding: 15px 30px; /* Aumenta el tamaño del padding para hacer los botones más grandes */
+  margin: 5px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Rockwell', sans-serif;
+  font-size: 18px;
+  flex: 1; /* Ocupa todo el espacio disponible */
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); 
+}
+
+.radio-buttons button:checked {
+  background-color: #003f6b;
+}
+
+.radio-buttons button:hover {
+  background-color: #00578d;
+}
+
+.radio-buttons button:focus {
+  outline: none; /* Quita el contorno al enfocar */
+}
