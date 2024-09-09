@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
     <link rel="stylesheet" type="text/css" href="../css/DiseñoEmpresaPostulante.css">
 </head>
 <body>
@@ -16,9 +16,10 @@
         </ul>
     </nav> 
     <div class="container">
-        <h1>Registro de Cuenta</h1>
-        <p>Por favor seleccione a continuacion el tipo de cuenta que desee crear segun sus preferencias:</p>
-      
+        <h1>ProyectPulse</h1>
+        <h2>Tu futuro es acá</h2>
+        <p>Somos la plataforma que facilita la conexión entre talento y empresas. Encuentra oportunidades laborales en diversas industrias y avanza en tu carrera profesional con nosotros. Únete hoy para descubrir nuevas oportunidades que se alineen con tus habilidades y experiencia.</p>
+        
         <form>
             <div class="radio-buttons">
                 <button type="button" onclick="window.location.href='registroempresa.php'">Empresa</button>
