@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-09-2024 a las 22:12:04
+-- Tiempo de generación: 09-09-2024 a las 21:37:22
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -31,11 +31,18 @@ CREATE TABLE `datosempresa` (
   `id` int(11) NOT NULL,
   `email` varchar(50) NOT NULL,
   `nombre` varchar(50) NOT NULL,
-  `descripcion` int(200) NOT NULL,
-  `sitioweb` int(200) NOT NULL,
-  `emailcontacto` int(100) NOT NULL,
+  `descripcion` varchar(200) NOT NULL,
+  `sitioweb` varchar(200) NOT NULL,
+  `emailcontacto` varchar(100) NOT NULL,
   `telefono` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `datosempresa`
+--
+
+INSERT INTO `datosempresa` (`id`, `email`, `nombre`, `descripcion`, `sitioweb`, `emailcontacto`, `telefono`) VALUES
+(5, 'aurelio@aurelio.com', 'bbbbbb', 'bbbbbbb', 'https:bbbbbbb', 'bbbbbbb@gmail.com', 123456789);
 
 -- --------------------------------------------------------
 
@@ -144,7 +151,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `datosempresa`
 --
 ALTER TABLE `datosempresa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `empresa`
