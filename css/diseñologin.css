@@ -1,154 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Rockwell',sans-serif;
-}
-
-body{
-    background: #9AE1FF;
-}
-
-
-.container {
+body {
+    font-family: 'Rockwell', sans-serif;
+    background-image: url('../img/registerbackground.jpg'); 
+    background-size: cover;
+    background-position: center;
     display: flex;
+    justify-content: center; /* Centrar el contenedor principal horizontalmente */
     align-items: center;
-    justify-content: center;
-    min-height: 90vh;
-    margin-left: -750px; /* Ajusta este valor según sea necesario */
-    
+    height: 100vh;
+    margin: 0;
 }
 
-.box{
-    background: #9AE1FF;
-    display: flex;
-    flex-direction: column;
-    padding: 25px 25px;
-    border-radius: 25px;
-    box-shadow: 0 0 -500px 0 rgba(0,0,0,0.1),
-                0 32px 64px -48px rgba(0,0,0,0.5);
-}
-.form-box{
-    width: 450px;
-    margin: 0px 10px;
-}
-.form-box header{
-    font-size: 25px;
-    font-weight: 2000;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #000;
-    margin-bottom: 10px;
+/* Estilos para las secciones principales */
+.registro-formulario {
+    padding: 35px; /* Tamaño intermedio del padding */
+    border-radius: 10px; /* Radio del borde intermedio */
+    width: 550px; /* Tamaño intermedio del ancho */
+    text-align: center;
 }
 
-.form-box form .field{
-    display: flex;
-    margin-bottom: 10px;
-    flex-direction: column;
-
+/* Estilos para los títulos en las secciones */
+.registro-formulario h1 {
+    margin-bottom: 14px; /* Margen inferior intermedio */
+    color: white;
+    font-size: 27px; /* Tamaño de fuente intermedio */
 }
-.form-box form .input input{
-    height: 40px;
+
+/* Estilos para el formulario en una sola columna */
+.registro-formulario form {
+    display: grid;
+    gap: 16px; /* Espacio intermedio entre campos */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+/* Estilos para los campos de entrada en el formulario de inicio de sesión */
+.registro-formulario input[type="text"],
+.registro-formulario input[type="email"],
+.registro-formulario input[type="password"] {
     width: 100%;
-    font-size: 16px;
-    padding: 0 10px;
-    border-radius: 5px;
-    border: 1px solid #000;
+    height: 40px; /* Altura intermedia de los campos de entrada */
+    padding: 10px; /* Padding intermedio */
+    border: none;
+    border-bottom: 1.5px solid white; /* Grosor intermedio del borde inferior */
+    background-color: transparent;
+    color: white;
+    font-size: 15px; /* Tamaño de fuente intermedio */
+    box-sizing: border-box;
+    transition: border-bottom-color 0.3s ease;
+}
+
+/* Estilos para el borde y sombra al enfocar los campos */
+.registro-formulario input[type="text"]:focus,
+.registro-formulario input[type="email"]:focus,
+.registro-formulario input[type="password"]:focus {
+    border-bottom-color: #ffffff;
     outline: none;
 }
-.btn{
-    height: 35px;
-    background: rgb(0, 0, 0);
-    border: 0;
-    border-radius: 1px;
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all .3s;
-    margin-top: 10px;
-    padding: 0px 10px;
-}
-.btn:hover{
-    opacity: 0.82;
-}
-.submit{
-    width: 100%;
-}
-.links{
-    margin-bottom: 15px;
+
+/* Estilos para las etiquetas (labels) en el formulario */
+.registro-formulario label {
+    display: block;
+    margin-bottom: 10px; /* Margen inferior intermedio */
+    color: white;
+    font-size: 17.5px; /* Tamaño de fuente intermedio */
+    text-align: left;
 }
 
-/********* Home *****************/
+/* Estilos para el párrafo (mensaje) en el formulario */
+.registro-formulario p {
+    color: white;
+    font-size: 15px; /* Tamaño de fuente intermedio */
+}
 
-.nav{
-    background: #fff;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    line-height: 60px;
-    z-index: 100;
-}
-.logo{
-    font-size: 25px;
-    font-weight: 900;
-    
-}
-.logo a{
+/* Estilos para los enlaces dentro de los párrafos en el formulario */
+.registro-formulario p a {
     text-decoration: none;
-    color: #000;
+    color: white;
+    font-size: 17.5px;
 }
-.right-links a{
-    padding: 0 10px;
+
+/* Estilos para los botones */
+.radio-buttons {
+    background-color: #006DA5;
+    color: #fff;
+    padding: 14px 18px; 
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease;
 }
-main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 60px;
-}
-.main-box{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
-}
-.main-box .top{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.bottom{
-    width: 100%;
-    margin-top: 20px;
-}
-@media only screen and (max-width:840px){
-    .main-box .top{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .top .box{
-        margin: 10px 10px;
-    }
-    .bottom{
-        margin-top: 0;
-    }
-}
-.message{
-    text-align: center;
-    background: #f9eded;
-    padding: 15px 0px;
-    border:1px solid #699053;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    color: red;
-}
-.image-section img {
-    width: 742px; /* Ajusta este valor para hacer la imagen más ancha */
-    height: 641px;
-    border-radius: 8px;
-    position: absolute;
-    top: 0px; /* Asegúrate de que los valores tienen unidades */
-    left: 623px; /* Asegúrate de que los valores tienen unidades */
+
+.radio-buttons:hover {
+    background-color: #00578d;
 }
 
 /*------------------------------------------NAV--------------------------------------*/
@@ -189,12 +133,11 @@ main{
 
 .nav-links a {
     text-decoration: none;
-    color: #000;
+    color: #ffffff;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #000;    
+    color: #bee7ff;    
 }
-

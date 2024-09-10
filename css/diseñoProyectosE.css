@@ -61,7 +61,7 @@ body {
     box-sizing: border-box;
     height: 100%;
     position: fixed;
-    margin-top: 20px;
+    margin-top: 0px;
     border-right: 1px solid #dee2e6;
     box-shadow: 2px 0 4px rgba(0,0,0,0.1);
 }

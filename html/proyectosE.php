@@ -9,9 +9,7 @@
 <body>
     <header class="navbar">
         <div class="logo">
-            <a href="inicio.php">
                 <img src="../img/LogoProyectPulse-01.png" alt="Logo">
-            </a>
         </div>
         <nav class="top-nav">
             <ul>

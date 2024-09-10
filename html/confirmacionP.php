@@ -8,7 +8,7 @@
 </head>
 <body>
 <nav class="navbar">
-    <a href="inicio.php">
+    <a href="index.php">
         <img src="../img/LogoProyectPulse-01.png" alt="Inicio" class="nav-logo">
     </a>
     <ul class="nav-links">
