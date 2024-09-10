@@ -19,16 +19,11 @@ body {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
 }
 
 .navbar .logo img {
     height: 50px;
 }
-
 /* Estilo para el logo */
 .logo img {
     height: 50px; /* Ajusta la altura según sea necesario */
@@ -45,11 +40,10 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    margin-right: 40px;
 }
 
 .navbar .top-nav ul li {
-    margin-left: 10px
+    margin-left: 20px;
 }
 
 .navbar .top-nav ul li a {
@@ -71,11 +65,9 @@ body {
     box-sizing: border-box;
     height: 100%;
     position: fixed;
-    top: 74px; /* Ajuste para quedar debajo del navbar */
-    left: 0;
+    top: 75px;
     border-right: 1px solid #dee2e6;
     box-shadow: 2px 0 4px rgba(0,0,0,0.1);
-    z-index: 1000;
 }
 
 .sidebar ul {
@@ -102,17 +94,16 @@ body {
     background-color: #e9ecef;
     color: #007bff;
 }
-
-/* Estilos para el área de contenido */
+/* Área de contenido */
 .content {
     flex-grow: 1;
     padding: 40px;
     margin-left: 220px; /* Ajuste para alinearse con el sidebar */
     margin-top: 74px; /* Para evitar superposición con el navbar */
-    height: calc(100vh - 74px); /* Para que ocupe el espacio correcto */
-    overflow-y: auto; /* Habilitar scroll solo en el main */
-    background-color: #fafafa; /* Color de fondo integrado */
-    color: #333; /* Color de texto */
+    height: calc(100vh - 74px); /* Ocupa el espacio restante */
+    overflow-y: auto; /* Habilitar scroll solo en el área de contenido */
+    background-color: #fafafa;
+    color: #333;
 }
 
 /* Título del contenido */
@@ -128,12 +119,12 @@ body {
 .profile-form {
     display: flex;
     flex-direction: column;
-    background-color: transparent; /* Eliminar fondo separado del formulario */
-    padding: 0; /* Eliminar padding adicional */
+    background-color: transparent;
+    padding: 0;
     color: #333;
 }
 
-/* Estilos de los inputs - línea inferior */
+/* Estilos de los inputs */
 .profile-form label {
     margin-bottom: 8px;
     font-weight: bold;
@@ -142,24 +133,24 @@ body {
 
 .profile-form input,
 .profile-form textarea {
-    padding: 10px 0; /* Ajustar el padding para inputs */
+    padding: 10px 0;
     margin-bottom: 20px;
-    border: none; /* Eliminar todos los bordes */
-    border-bottom: 2px solid #ccc; /* Solo una línea en la parte inferior */
+    border: none;
+    border-bottom: 2px solid #ccc;
     font-size: 16px;
-    background-color: transparent; /* Fondo transparente para inputs */
+    background-color: transparent;
     color: #333;
     transition: border-color 0.3s ease;
 }
 
 .profile-form input:focus,
 .profile-form textarea:focus {
-    border-bottom-color: #006da5; /* Cambiar el color de la línea inferior al enfocar */
+    border-bottom-color: #006da5;
     outline: none;
 }
 
 .profile-form textarea {
-    resize: vertical; /* Permitir ajuste vertical del textarea */
+    resize: vertical;
 }
 
 /* Botón */
@@ -172,7 +163,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    align-self: flex-start; /* Botón alineado a la izquierda */
+    align-self: flex-start;
 }
 
 .profile-form button:hover {
@@ -185,32 +176,28 @@ body {
     color: #999;
     font-style: italic;
 }
+
 /* Sección de proyectos */
-/* Estilo general para la sección de proyectos */
 .project-section {
     margin-top: 30px;
 }
 
-/* Contenedor del proyecto con título, campos y botón */
 .project-container {
     display: flex;
-    flex-direction: column; /* Organizar en una columna */
-    gap: 20px; /* Espacio entre los elementos */
+    flex-direction: column;
+    gap: 20px;
 }
 
-/* Contenedor de la información del proyecto */
 .project-info {
-    flex-grow: 1; /* Ocupa el espacio disponible */
+    flex-grow: 1;
 }
 
-/* Título para la sección de proyectos */
 .project-info h3 {
     font-size: 20px;
     margin-bottom: 15px;
     color: #333;
 }
 
-/* Estilo para los campos de entrada del proyecto */
 .project-info .project input[type="text"],
 .project-info .project textarea {
     padding: 10px 0;
@@ -231,7 +218,7 @@ body {
     outline: none;
 }
 
-/* Estilo para el botón de agregar proyecto */
+/* Botón de agregar proyecto */
 #add-project-btn {
     padding: 12px 20px;
     background-color: #006da5;
@@ -240,26 +227,25 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: auto; /* Empuja el botón hacia abajo */
+    margin-top: auto;
 }
 
 #add-project-btn:hover {
     background-color: #005b8a;
 }
 
-/* Estilo para el mensaje de aviso */
+/* Mensaje de aviso */
 .message {
-    color: #e74c3c; /* Color rojo para el aviso */
-    background-color: #fbe9e7; /* Fondo suave para el mensaje */
-    border: 1px solid #e74c3c; /* Borde rojo para el mensaje */
+    color: #e74c3c;
+    background-color: #fbe9e7;
+    border: 1px solid #e74c3c;
     padding: 10px;
     border-radius: 4px;
     margin-top: 15px;
-    display: none; /* Inicialmente oculto */
+    display: none;
     font-size: 14px;
 }
 
-/* Ajustes adicionales si es necesario */
 .message.visible {
-    display: block; /* Mostrar cuando se añade la clase visible */
+    display: block;
 }

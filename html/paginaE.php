@@ -38,12 +38,10 @@
     </header>
     <nav class="sidebar">
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="perfilE.php">Perfil</a></li>
+            <li><a href="paginaE.php">Inicio</a></li>
+            <li><a href="perfilE.php">Perfil De Empresa</a></li>
             <li><a href="proyectosE.php">Proyectos</a></li>
-            <li><a href="#">Postulantes</a></li>
-            <li><a href="#">Configuración</a></li>
-            <li><a href="#">Todas las herramientas</a></li>
+            <li><a href="#">Mis Proyectos</a></li>
         </ul>
     </nav>  
     <main class="content">

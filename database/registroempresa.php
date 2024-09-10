@@ -6,7 +6,6 @@ if(isset($_POST['register']))
     //tabla empresa
     $nombre = $_POST['nombreEmpresa'];
     $email = $_POST['email'];
-    $direccion = $_POST['direccion'];
     $password = $_POST['password'];
     $CUIT = $_POST['cuit'];
     $FechaCreacion = $_POST['FechaCreacion'];
@@ -16,8 +15,8 @@ if(isset($_POST['register']))
     mysqli_close($enlace);
 
     include("conexion.php");
-    $consulta = "INSERT INTO empresa(id,nombre,email,direccion,cuit)
-            VALUES (null,'$nombre', '$email', '$direccion', '$CUIT')";
+    $consulta = "INSERT INTO empresa(id,nombre,email,cuit)
+            VALUES (null,'$nombre', '$email', '$CUIT')";
     $resultado = mysqli_query($enlace, $consulta);
     
 
