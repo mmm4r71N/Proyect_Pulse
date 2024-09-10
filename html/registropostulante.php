@@ -26,14 +26,8 @@
             <label for="password">Contraseña</label>
             <input type="password" id="password" name="password" required>
 
-            <label for="cuit">DNI</label>
-            <input type="text" id="cuit" name="cuit" required>
-
-            <label for="direccion">Dirección</label>
-            <input type="text" id="direccion" name="direccion" required>
-
-            <label for="fechaNacimiento">Fecha de Nacimiento</label>
-            <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+            <label for="password">Repetir Contraseña</label>
+            <input type="password" id="password" name="password" required>
 
             <input type="submit" value="Registrarse" class="radio-buttons" name = "register">
         </form>

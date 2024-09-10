@@ -27,15 +27,13 @@
             <label for="password">Contraseña</label>
             <input type="password" id="password" name="password" required>
 
+            <label for="password">Repetir Contraseña</label>
+            <input type="password" id="password" name="password" required>
+
             <label for="cuit">CUIT</label>
             <input type="text" id="cuit" name="cuit" required>
 
-            <label for="direccion">Dirección</label>
-            <input type="text" id="direccion" name="direccion" required>
 
-            <label for="FechaCreacion">Fecha de Creacion</label>
-            <input type="date" id="FechaCreacion" name="FechaCreacion" required>
-        
             <input type="submit" value="Registrarse" class="radio-buttons" name = "register">
         </form>    
         <p>¿Se confundió de selección? <a href="index.php">Cambiar</a></p>
