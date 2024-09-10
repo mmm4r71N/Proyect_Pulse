@@ -1,13 +1,12 @@
-
 /* Estilos Generales */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
+    overflow-x: hidden; /* Evitar scroll horizontal */
 }
 
-/* Navbar */
 .navbar {
     background-color: #006da5;
     color: white;
@@ -54,11 +53,52 @@ body {
     color: #ddd;
 }
 
+/* Sidebar */
+.sidebar {
+    background-color: #ffffff;
+    width: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    margin-top: 20px;
+    border-right: 1px solid #dee2e6;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #495057;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+
 /* Main Content */
 .content {
     padding: 20px;
     background-color: #ffffff;
     margin: 0 auto;
+    margin-left: calc(100px + 40px); /* Deja espacio para el sidebar */
+    overflow-y: auto;
+    height: calc(100vh - 80px); /* Ajuste la altura para no interferir con el navbar */
 }
 
 h1 {
@@ -68,166 +108,63 @@ h1 {
     text-align: center;
 }
 
-/* Proyectos */
-.projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project-card {
-    background: #ffffff;
+/* Formulario de Empresa */
+.empresa-form {
+    padding: 20px;
+    background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px; /* Ajusta el tamaño según sea necesario */
-    box-sizing: border-box;
-    transition: transform 0.3s, box-shadow 0.3s;
+    width: 70%;
+    margin: 20px auto;
 }
 
-.project-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.project-logo {
-    height: 60px;
-    width: 60px;
-    margin-right: 15px;
-}
-
-.card-header h2 {
-    margin: 0;
-    font-size: 22px;
-    color: #007bff;
-}
-
-.status {
-    font-size: 14px;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 20px;
-    color: white;
-    text-transform: uppercase;
-}
-
-.status.open {
-    background-color: #28a745; /* Verde para abierto */
-}
-
-.status.closed {
-    background-color: #dc3545; /* Rojo para cerrado */
-}
-
-.project-summary {
+.empresa-form label {
     font-size: 16px;
-    margin-bottom: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
     color: #495057;
 }
 
-.view-details {
-    display: block;
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
+.empresa-form input,
+.empresa-form textarea,
+.empresa-form select {
+    width: 80%; /* Cambié de 100% a 80% para reducir el tamaño */
+    padding: 6px; /* Un poco menos de espacio interno */
+    margin-top: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-sizing: border-box;
 }
 
-.view-details:hover {
-    text-decoration: underline;
+.empresa-form textarea {
+    resize: none;
+    height: 60px; /* Ajusté la altura del textarea a 60px para hacerlo más pequeño */
 }
 
-.applicants-info {
+.empresa-form select {
+    height: 35px; /* Reducido un poco */
+}
+
+.empresa-form input[type="text"],
+.empresa-form input[type="email"],
+.empresa-form input[type="tel"] {
+    height: 35px; /* Disminuí la altura de los inputs de texto */
+}
+
+.empresa-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
     margin-top: 20px;
 }
 
-.applicants-info h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
+.empresa-form button:hover {
+    background-color: #0056b3;
 }
 
-.applicants-info ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.applicants-info ul li {
-    margin-bottom: 5px;
-    color: #495057;
-}
-
-/* Modal */
-.modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease;
-}
-
-.modal-content {
-    background-color: #ffffff;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 8px;
-    position: relative;
-    animation: fadeIn 0.3s ease;
-}
-
-.modal-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.modal-logo {
-    max-height: 100px;
-    width: auto;
-    margin-right: 20px;
-}
-
-.modal-header h2 {
-    margin: 0;
-    font-size: 24px;
-    color: #007bff;
-}
-
-.modal-header .status {
-    font-size: 16px;
-    padding: 8px 16px;
-    border-radius: 20px;
-    margin-left: auto;
-}
-
-.close {
-    color: #aaa;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #333;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
