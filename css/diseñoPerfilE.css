@@ -99,8 +99,6 @@ body {
     flex-grow: 1;
     padding: 40px;
     margin-left: 220px; /* Ajuste para alinearse con el sidebar */
-    margin-top: 74px; /* Para evitar superposición con el navbar */
-    height: calc(100vh - 74px); /* Ocupa el espacio restante */
     overflow-y: auto; /* Habilitar scroll solo en el área de contenido */
     background-color: #fafafa;
     color: #333;

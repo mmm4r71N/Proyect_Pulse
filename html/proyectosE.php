@@ -29,44 +29,74 @@
     </nav>
     
     <main class="content">
-        <h1>Proyectos y Postulantes</h1>
+    <h2>Crear Proyecto</h2>
+    <form  method="POST" class="profile-form">
+
+        <label for="nombre">Nombre del Proyecto:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre de la Empresa" required>
+
+        <label for="descripcion">Descripción del Proyecto:</label>
+        <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe tu empresa..."></textarea>
+
+        <!-- Menú desplegable para Área Requerida -->
+        <label class="dropdown-label" for="AreaRequerida">Área Requerida:
+            <div class="dropdown-content">
+                <a href="#">Tecnología</a>
+                <a href="#">Finanzas</a>
+                <a href="#">Marketing</a>
+            </div>
+        </label>
+
+        <!-- Menú desplegable para Disponibilidad -->
+        <label class="dropdown-label" for="Disponibilidad">Disponibilidad:
+            <div class="dropdown-content">
+                <a href="#">Tiempo completo</a>
+                <a href="#">Medio tiempo</a>
+                <a href="#">Freelance</a>
+            </div>
+        </label>
+
+        <!-- Menú desplegable para Provincia -->
+        <label class="dropdown-label" for="Provincia">Provincia:
+            <div class="dropdown-content">
+                <a href="#">CABA</a>
+                <a href="#">Buenos Aires</a>
+                <a href="#">Cordoba</a>
+                <a href="#">Santa Fe</a>
+                <a href="#">Mendoza</a>
+                <a href="#">La Pampa</a>
+                <a href="#">Neuquen</a>
+                <a href="#">Rio Negro</a>
+                <a href="#">Chubut</a>
+                <a href="#">Santa Cruz</a>
+                <a href="#">Tierra del Fuego</a>
+                <a href="#">San Luis</a>
+                <a href="#">Entre Rios</a>
+                <a href="#">Corrientes</a>
+                <a href="#">Misiones</a>
+                <a href="#">Chaco</a>
+                <a href="#">Formosa</a>
+                <a href="#">Santiago del Estero</a>
+                <a href="#">Buenos Aires</a>
+                <a href="#">Córdoba</a>
+                <a href="#">Santa Fe</a>
+                <a href="#">Buenos Aires</a>
+                <a href="#">Córdoba</a>
+                <a href="#">Santa Fe</a>
+            </div>
+        </label>
+
+        <label for="Localidad">Localidad</label>
+        <input type="text" id="direccion" name="sitioweb" placeholder="Localidad" required>
+
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion" name="sitioweb" placeholder="Dirección" required> 
         
-        <!-- Formulario de Mi Empresa -->
-        <div class="form-container">
-            <form class="empresa-form">
-                <fieldset>
-                    <legend>Mi empresa</legend>
-                    
-                    <label for="nombre">Nombre*</label>
-                    <input type="text" id="nombre" name="nombre" required>
-                    
-                    <label for="descripcion">Descripción*</label>
-                    <textarea id="descripcion" name="descripcion" required></textarea>
-                    
-                    <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" name="telefono">
-                    
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
-                    
-                    <label for="pais">País*</label>
-                    <select id="pais" name="pais" required>
-                        <option value="argentina">Argentina</option>
-                        <!-- Otras opciones -->
-                    </select>
-                    
-                    <label for="provincia">Provincia*</label>
-                    <input type="text" id="provincia" name="provincia" required>
-                    
-                    <label for="ciudad">Ciudad*</label>
-                    <input type="text" id="ciudad" name="ciudad" required>
-                    
-                    <label for="direccion">Dirección</label>
-                    <input type="text" id="direccion" name="direccion">
-                </fieldset>
-            </form>
-        </div>
-    </main>
+        <!-- Botón de enviar -->
+        <button type="submit" name="guardar">Guardar Cambios</button>
+
+    </form>
+</main>
 
     <script src="scripts/ScriptProyectosE.js"></script>
 </body>
