@@ -29,7 +29,7 @@
         <nav class="top-nav">
             <ul>
                 
-                <li><a href="#">Bienvenido, <?php echo $nombre ?></a></li>
+                <li><a href="perfilE.php">Bienvenido, <?php echo $nombre ?></a></li>
                 <li><a href="login.php">Cerrar Sesión</a></li>
             </ul>
         </nav>
