@@ -9,7 +9,7 @@
 <body>
     <header class="navbar">
         <div class="logo">
-                <img src="../img/LogoProyectPulse-01.png" alt="Logo">
+            <a href="PaginaE.php"> <img src="../img/LogoProyectPulse-01.png" alt="Logo"></a>
         </div>
         <nav class="top-nav">
             <ul>
@@ -24,7 +24,7 @@
             <li><a href="paginaE.php">Inicio</a></li>
             <li><a href="perfilE.php">Perfil De Empresa</a></li>
             <li><a href="proyectosE.php">Proyectos</a></li>
-            <li><a href="#">Mis Proyectos</a></li>
+            <li><a href="misProyectos.php">Mis Proyectos</a></li>
         </ul>
     </nav>
     

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-09-2024 a las 21:37:22
+-- Tiempo de generación: 16-09-2024 a las 19:02:22
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -54,7 +54,6 @@ CREATE TABLE `empresa` (
   `id` int(11) NOT NULL,
   `nombre` varchar(60) NOT NULL,
   `email` varchar(60) NOT NULL,
-  `direccion` varchar(60) NOT NULL,
   `cuit` varchar(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -62,12 +61,12 @@ CREATE TABLE `empresa` (
 -- Volcado de datos para la tabla `empresa`
 --
 
-INSERT INTO `empresa` (`id`, `nombre`, `email`, `direccion`, `cuit`) VALUES
-(1, '321', 'qwe@qwe.com', '321', '321'),
-(2, '321', 'qwe@qwe.com', '321', '321'),
-(3, '321', 'qwe@qwe.com', '321', '321'),
-(4, 'Tiago', 'aurelio@aurelio.com', '123', '12334455'),
-(5, 'Tiago', 'aurelio@aurelio.com', '123', '12334455');
+INSERT INTO `empresa` (`id`, `nombre`, `email`, `cuit`) VALUES
+(1, '321', 'qwe@qwe.com', '321'),
+(2, '321', 'qwe@qwe.com', '321'),
+(3, '321', 'qwe@qwe.com', '321'),
+(4, 'Tiago', 'aurelio@aurelio.com', '12334455'),
+(5, 'Tiago', 'aurelio@aurelio.com', '12334455');
 
 -- --------------------------------------------------------
 
