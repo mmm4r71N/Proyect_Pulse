@@ -4,62 +4,75 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/MisProyectosE.css">
 </head>
+<?php
+include("..\database\conexion.php");
+
+session_start();
+if (isset($_SESSION['email'])) {
+    $usuario = $_SESSION['email'];
+    
+    // Obtener el usuario
+    $sql = "SELECT * FROM empresa WHERE email = '$usuario'";
+    $consulta = mysqli_query($enlace, $sql);
+    
+    if (mysqli_num_rows($consulta) > 0) {
+        $fila = mysqli_fetch_assoc($consulta);
+        $nombre = $fila["email"];
+        
+        // Obtener los proyectos del usuario
+        $sqlProyectos = "SELECT * FROM proyectos WHERE email = '$usuario'";
+        $consultaProyectos = mysqli_query($enlace, $sqlProyectos);
+    }
+}
+?>
 <body>
 <header class="navbar">
-        <div class="logo">
-            <a href="PaginaE.php"> <img src="../img/LogoProyectPulse-01.png" alt="Logo"></a>
-        </div>
-        <nav class="top-nav">
-            <ul>
-                <li><a href="paginaE.php">Inicio</a></li>
-                <li><a href="login.php">Cerrar Sesión</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <nav class="sidebar">
+    <div class="logo">
+        <a href="PaginaE.php"> <img src="../img/LogoProyectPulse-01.png" alt="Logo"></a>
+    </div>
+    <nav class="top-nav">
         <ul>
             <li><a href="paginaE.php">Inicio</a></li>
-            <li><a href="perfilE.php">Perfil De Empresa</a></li>
-            <li><a href="proyectosE.php">Proyectos</a></li>
-            <li><a href="#">Mis Proyectos</a></li>
+            <li><a href="login.php">Cerrar Sesión</a></li>
         </ul>
     </nav>
+</header>
+
+<nav class="sidebar">
+    <ul>
+        <li><a href="paginaE.php">Inicio</a></li>
+        <li><a href="perfilE.php">Perfil De Empresa</a></li>
+        <li><a href="proyectosE.php">Proyectos</a></li>
+        <li><a href="#">Mis Proyectos</a></li>
+    </ul>
+</nav>
 <div class="main-content">
     <h1>Mis Proyectos</h1>
     <div class="card-container">
-        <!-- Tarjeta 1 -->
-        <div class="card">
-            <img src="../img/proyecto1.jpg" alt="Proyecto 1">
-            <div class="card-body">
-                <h2>Nombre del Proyecto 1</h2>
-                <p>Descripción breve del proyecto 1. Aquí puedes incluir detalles básicos sobre el proyecto.</p>
-                <a href="#" class="toggle-info">Más información</a>
-                <div class="card-extra-info">
-                    <p><strong>Participantes:</strong> Juan Pérez, Ana Gómez</p>
-                    <p><strong>Fecha de inicio:</strong> 01/01/2023</p>
-                    <p><strong>Fecha de fin:</strong> 31/12/2023</p>
-                </div>
-            </div>
-        </div>
-        <!-- Tarjeta 2 -->
-        <div class="card">
-            <img src="../img/proyecto2.jpg" alt="Proyecto 2">
-            <div class="card-body">
-                <h2>Nombre del Proyecto 2</h2>
-                <p>Descripción breve del proyecto 2. Aquí puedes incluir detalles básicos sobre el proyecto.</p>
-                <a href="#" class="toggle-info">Más información</a>
-                <div class="card-extra-info">
-                    <p><strong>Participantes:</strong> Laura Fernández, Carlos Ruiz</p>
-                    <p><strong>Fecha de inicio:</strong> 15/03/2023</p>
-                    <p><strong>Fecha de fin:</strong> 15/09/2023</p>
-                </div>
-            </div>
-        </div>
-        <!-- Agrega más tarjetas según sea necesario -->
+        <?php
+        // Verifica si hay proyectos
+        if (mysqli_num_rows($consultaProyectos) > 0) {
+            while ($proyecto = mysqli_fetch_assoc($consultaProyectos)) {
+                echo '<div class="card">';
+                echo '<img src="../img/proyecto_placeholder.jpg" alt="Proyecto ' . htmlspecialchars($proyecto['nombre']) . '">'; // Usa una imagen de placeholder
+                echo '<div class="card-body">';
+                echo '<h2>' . htmlspecialchars($proyecto['nombre']) . '</h2>';
+                echo '<p>' . htmlspecialchars($proyecto['descripcion']) . '</p>';
+                echo '<a href="#" class="toggle-info">Más información</a>';
+                echo '<div class="card-extra-info">';
+                //echo '<p><strong>Participantes:</strong> ' . htmlspecialchars($proyecto['participantes']) . '</p>'; // Asegúrate de tener esta columna en la tabla
+                echo '<p><strong>Fecha de inicio:</strong> ' . htmlspecialchars($proyecto['fechainicio']) . '</p>';
+                echo '<p><strong>Fecha de fin:</strong> ' . htmlspecialchars($proyecto['fechafin']) . '</p>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+            }
+        } else {
+            echo '<p>No tienes proyectos creados aún.</p>';
+        }
+        ?>
     </div>
 </div>
-
 
 </body>
 <script>
@@ -75,4 +88,3 @@
         });
     });
 </script>
-
