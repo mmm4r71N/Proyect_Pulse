@@ -4,6 +4,20 @@
     <title>Proyectos y Postulantes</title>
     <link rel="stylesheet" href="../css/diseñoProyectosE.css">
 </head>
+<?php
+    include("..\database\conexion.php");
+
+    session_start();
+    if (isset($_SESSION['email'])) {
+        $usuario = $_SESSION['email'];
+        $sql = "SELECT * FROM empresa WHERE email = '$usuario'";
+        $consulta = mysqli_query($enlace, $sql);
+        if (mysqli_num_rows($consulta) > 0) {
+            $fila = mysqli_fetch_assoc($consulta);
+            $nombre = $fila["email"];
+        }
+    }
+?>
 <body>
     <header class="navbar">
         <div class="logo">
@@ -104,6 +118,23 @@
             <button type="submit" name="guardar">Guardar Cambios</button>
 
         </form>
+        <?php
+   include("..\database\conexion.php");
+if(isset($_POST['guardar']))
+{
+    $proyecto = $_POST['nombre'];
+    $descripcion = $_POST['descripcion'];
+    $localidad = $_POST['localidad'];
+    $direccion= $_POST['direccion'];
+    $fechaI = $_POST['fechaInicio'];
+    $fechaF = $_POST['fechaFin'];
+    $consulta = "INSERT INTO proyectos(id,email,nombre,descripcion,localidad,direccion,fechainicio,fechafin)
+            VALUES(null,'$nombre','$proyecto','$descripcion','$localidad','$direccion','$fechaI','$fechaF')";
+    $resultado = mysqli_query($enlace,$consulta);
+    mysqli_close($enlace);
+}
+
+?>
     </main>
 
 <script>
