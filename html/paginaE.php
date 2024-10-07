@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="es">
-    <?php
+
+<?php
     include("..\database\conexion.php");
     
     session_start();
@@ -82,7 +81,6 @@
         </section>
     </main>
 </body>
-</html>
 
 <!--?php
     include("..\database\conexion.php");
