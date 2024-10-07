@@ -1,0 +1,198 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+    overflow: hidden; /* Para evitar que toda la página se desplace */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #006da5;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+/* Estilo para el logo */
+.logo img {
+    height: 50px; /* Ajusta la altura según sea necesario */
+    transition: transform 0.3s ease; /* Animación de transición para el agrandamiento */
+}
+
+/* Efecto al pasar el cursor por encima del logo */
+.logo img:hover {
+    transform: scale(1.1); /* Agranda la imagen en un 10% */
+}
+
+.navbar .top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .top-nav ul li {
+    margin-left: 20px;
+}
+
+.navbar .top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .top-nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #ffffff;
+    width: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    margin-top: 0px;
+    top: 70px;
+    border-right: 1px solid #dee2e6;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #495057;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}   
+
+.main-content{
+    flex-grow: 1;
+    padding: 39px;
+    margin-left: 220px; /* Ajuste para alinearse con el sidebar */
+    overflow-y: auto; /* Habilitar scroll solo en el área de contenido */
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Estilos para el contenedor de las tarjetas */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Espacio entre tarjetas */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Estilos para cada tarjeta */
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    overflow: hidden;
+    width: 350px; /* Tamaño de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Estilo para la imagen de la tarjeta */
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid #e0e0e0;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto en la imagen al pasar el cursor */
+.card:hover img {
+    transform: scale(1.05); /* Agranda la imagen ligeramente */
+}
+
+/* Estilo para el contenido de la tarjeta */
+.card-body {
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+/* Estilo para el título y el texto */
+.card-body h2 {
+    margin: 0 0 10px;
+    font-size: 22px; /* Tamaño del título */
+    color: #333;
+}
+
+.card-body p {
+    margin: 0 0 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Estilo para el enlace de más información */
+.card-body a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.card-body a:hover {
+    color: #0056b3;
+}
+
+/* Estilo para la información adicional */
+.card-extra-info {
+    display: none; /* Oculta la información adicional por defecto */
+    padding: 15px;
+    background-color: #ffffff;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Estilo para cada línea de la información adicional */
+.card-extra-info p {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+/* Efecto al pasar el cursor sobre la tarjeta */
+.card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta ligeramente */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Sombra más prominente */
+    background-color: #f0f8ff; /* Color de fondo ligero al pasar el cursor */
+}
+
+/* Estilo para mostrar la información adicional */
+.card.show-extra .card-extra-info {
+    display: block; /* Muestra la información adicional cuando se activa */
+}

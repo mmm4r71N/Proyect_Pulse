@@ -1,0 +1,249 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    height: 100vh;
+    overflow: hidden; /* Para evitar que toda la página se desplace */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #006da5;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar .logo img {
+    height: 50px;
+}
+/* Estilo para el logo */
+.logo img {
+    height: 50px; /* Ajusta la altura según sea necesario */
+    transition: transform 0.3s ease; /* Animación de transición para el agrandamiento */
+}
+
+/* Efecto al pasar el cursor por encima del logo */
+.logo img:hover {
+    transform: scale(1.1); /* Agranda la imagen en un 10% */
+}
+
+.navbar .top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar .top-nav ul li {
+    margin-left: 20px;
+}
+
+.navbar .top-nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar .top-nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #ffffff;
+    width: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    border-right: 1px solid #dee2e6;
+    box-shadow: 2px 0 4px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #495057;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e9ecef;
+    color: #007bff;
+}
+/* Área de contenido */
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    margin-left: 220px; /* Ajuste para alinearse con el sidebar */
+    overflow-y: auto; /* Habilitar scroll solo en el área de contenido */
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Título del contenido */
+.content h2 {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* Formulario de perfil */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilos de los inputs */
+.profile-form label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #666;
+}
+
+.profile-form input,
+.profile-form textarea {
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    background-color: transparent;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.profile-form input:focus,
+.profile-form textarea:focus {
+    border-bottom-color: #006da5;
+    outline: none;
+}
+
+.profile-form textarea {
+    resize: vertical;
+}
+
+/* Botón */
+.profile-form button {
+    padding: 12px 20px;
+    background-color: #006da5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.profile-form button:hover {
+    background-color: #005b8a;
+}
+
+/* Placeholder */
+.profile-form input::placeholder,
+.profile-form textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Sección de proyectos */
+.project-section {
+    margin-top: 30px;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-info {
+    flex-grow: 1;
+}
+
+.project-info h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.project-info .project input[type="text"],
+.project-info .project textarea {
+    padding: 10px 0;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    background-color: transparent;
+    color: #333;
+    transition: border-color 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.project-info .project input[type="text"]:focus,
+.project-info .project textarea:focus {
+    border-bottom-color: #006da5;
+    outline: none;
+}
+
+/* Botón de agregar proyecto */
+#add-project-btn {
+    padding: 12px 20px;
+    background-color: #006da5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: auto;
+}
+
+#add-project-btn:hover {
+    background-color: #005b8a;
+}
+
+/* Mensaje de aviso */
+.message {
+    color: #e74c3c;
+    background-color: #fbe9e7;
+    border: 1px solid #e74c3c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+    display: none;
+    font-size: 14px;
+}
+
+.message.visible {
+    display: block;
+}
