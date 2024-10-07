@@ -15,7 +15,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="login.php">Login</a></li>
-                <li><a href="index.php">Registrarse</a></li>
+                <li><a href="index.php">Home</a></li>
             </ul>
         </nav>
         <div class="container">

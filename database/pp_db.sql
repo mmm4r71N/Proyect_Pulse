@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-09-2024 a las 19:02:22
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.0.13
+-- Tiempo de generación: 07-10-2024 a las 04:37:18
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -35,14 +35,7 @@ CREATE TABLE `datosempresa` (
   `sitioweb` varchar(200) NOT NULL,
   `emailcontacto` varchar(100) NOT NULL,
   `telefono` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `datosempresa`
---
-
-INSERT INTO `datosempresa` (`id`, `email`, `nombre`, `descripcion`, `sitioweb`, `emailcontacto`, `telefono`) VALUES
-(5, 'aurelio@aurelio.com', 'bbbbbb', 'bbbbbbb', 'https:bbbbbbb', 'bbbbbbb@gmail.com', 123456789);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -55,7 +48,7 @@ CREATE TABLE `empresa` (
   `nombre` varchar(60) NOT NULL,
   `email` varchar(60) NOT NULL,
   `cuit` varchar(60) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `empresa`
@@ -81,7 +74,7 @@ CREATE TABLE `postulante` (
   `direccion` varchar(60) NOT NULL,
   `cuit` int(11) NOT NULL,
   `fechanacimiento` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `postulante`
@@ -89,6 +82,34 @@ CREATE TABLE `postulante` (
 
 INSERT INTO `postulante` (`id`, `nombre`, `email`, `direccion`, `cuit`, `fechanacimiento`) VALUES
 (3, 'bbbbb', 'bbbb@bbbb', '21321321', 3242, '2024-09-19');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `proyectos`
+--
+
+CREATE TABLE `proyectos` (
+  `id` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `descripcion` varchar(200) NOT NULL,
+  `localidad` varchar(50) NOT NULL,
+  `direccion` varchar(50) NOT NULL,
+  `fechainicio` date NOT NULL,
+  `fechafin` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `proyectos`
+--
+
+INSERT INTO `proyectos` (`id`, `email`, `nombre`, `descripcion`, `localidad`, `direccion`, `fechainicio`, `fechafin`) VALUES
+(4, 'Tiago', 'aaaaaaa', 'bbbbb', 'ccccc', 'ddddd', '2024-09-12', '2024-10-11'),
+(5, 'Tiago', 'bbbb', 'ccccc', 'dddddd', 'eeeee', '2024-09-11', '2024-09-27'),
+(6, 'Tiago', 'aaaa', 'bbbbbb', 'ccccc', 'ddd', '2024-09-26', '2024-10-12'),
+(7, 'aurelio@aurelio.com', 'eeeee', 'qqqqqqqq', 'sadsd', 'gfdgfdgdf', '2024-09-21', '2024-10-12'),
+(8, 'aurelio@aurelio.com', 'aaaaaaaa', 'aaaaaaaa', 'aaaaaaa', 'aaaaaaaa', '2024-09-03', '2024-10-09');
 
 -- --------------------------------------------------------
 
@@ -101,7 +122,7 @@ CREATE TABLE `usuario` (
   `email` varchar(60) NOT NULL,
   `pass` varchar(60) NOT NULL,
   `tipousuario` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`
@@ -137,6 +158,12 @@ ALTER TABLE `postulante`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `proyectos`
+--
+ALTER TABLE `proyectos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -163,6 +190,12 @@ ALTER TABLE `empresa`
 --
 ALTER TABLE `postulante`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `proyectos`
+--
+ALTER TABLE `proyectos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

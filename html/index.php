@@ -15,7 +15,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="login.php">Login</a></li>
-                <li><a href="index.php">Registrarse</a></li>
+                <li><a href="seleccionregistro.php">Registrarse</a></li>
             </ul>
         </nav>
         <div class="container">
@@ -54,12 +54,12 @@
             <div class="testimonio">
                 <div class="stars">★★★★★</div>
                 <p>Quería agradecerle, porque gracias a una publicación que hicieron conseguí trabajo, arranco el día jueves, muchísimas gracias, por más gente como ustedes.</p>
-                <span>- René Vallejos</span>
+                <span>- Gerpe Ignacio</span>
             </div>
             <div class="testimonio">
                 <div class="stars">★★★★★</div>
                 <p>Muchísimas gracias por el CV, gracias a ustedes pude conseguir empleo para poder salir adelante con mi familia, muchísimas gracias, son unos genios, se los re agradezco.</p>
-                <span>- Joaquín Ezequiel</span>
+                <span>- Why so serious</span>
             </div>
         </section>
         
