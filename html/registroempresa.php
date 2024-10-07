@@ -6,7 +6,7 @@
 </head>
 <body>
 <nav class="navbar">
-        <a href="inicio.php">
+        <a href="index.php">
             <img src="../img/LogoProyectPulse-01.png" alt="Inicio" class="nav-logo">
         </a>
         <ul class="nav-links">
@@ -36,6 +36,6 @@
 
             <input type="submit" value="Registrarse" class="radio-buttons" name = "register">
         </form>    
-        <p>¿Se confundió de selección? <a href="index.php">Cambiar</a></p>
+        <p>¿Se confundió de selección? <a href="seleccionregistro.php">Cambiar</a></p>
     </div>
 </body>
