@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,11 +7,11 @@
 </head>
 <body>
     <nav class="navbar">
-        <a href="inicio.php">
+        <a href="index.php">
             <img src="../img/LogoProyectPulse-01.png" alt="Inicio" class="nav-logo">
         </a>
         <ul class="nav-links">
-            <li><a href="index.php">Crea Tu Cuenta</a></li>
+            <li><a href="seleccionregistro.php">Crea Tu Cuenta</a></li>
             <li><a href="ayuda.php">Ayuda</a></li>
         </ul>  
     </nav>
@@ -33,4 +32,3 @@
         </form>
     </div>
 </body>
-</html>

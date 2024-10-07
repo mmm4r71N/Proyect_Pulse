@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
 
-    <link rel="stylesheet" type="text/css" href="../css/DiseñoEmpresaPostulante.css">
+    <link rel="stylesheet" type="text/css" href="../css/DiseInicio.css">
 </head>
 
 <body>
@@ -38,9 +38,12 @@
         <div class="seccion-inscripcion">
             <h2>¿Te cuesta buscar trabajo?</h2>
             <p>Nosotros podemos buscar los puestos que necesitas y postularse!</p>
-            <button>Inscripción</button>
+            <a href="seleccionregistro.php">
+                <button>Inscripción</button>
+            </a>
         </div>
     </div>
+
     <div class="body3">
 
         <section class="testimonios">
@@ -63,19 +66,43 @@
         <section class="servicios">
             <div class="servicio">
                 <div class="ribbon">SERVICIOS</div>
+                <div class="icon">🧑‍💼</div>
                 <h3>Reclutamiento</h3>
                 <p>Encontramos el mejor talento para tu empresa.</p>
             </div>
             <div class="servicio">
                 <div class="ribbon">SERVICIOS</div>
-                <h3>Capacitación</h3>
-                <p>Ofrecemos programas de formación profesional.</p>
-            </div>
-            <div class="servicio">
-                <div class="ribbon">SERVICIOS</div>
-                <h3>Consultoría</h3>
-                <p>Brindamos asesoramiento en recursos humanos para mejorar tu negocio.</p>
+                <div class="icon">👨‍💼</div>
+                <h3>Busqueda</h3>
+                <p>Te ayudamos a encontrar el trabajo que siempre quisiste</p>
             </div>
         </section>
     </div>
-</body>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h2>Proyect Pulse</h2>
+                <p>
+                    Somos una empresa especializada en ayudar a individuos a encontrar empleos que se adapten a sus habilidades y experiencia. Trabajamos con una variedad de organizaciones para conectar a los candidatos con las mejores oportunidades laborales.
+                </p>
+                <p>
+                    📍 Argentina | Buenos Aires | Ramos Mejia<br>
+                    ✉️ info@proyectpulse.com
+                </p>
+            </div>
+
+            <div class="footer-right">
+                <h3>Enlaces útiles</h3>
+                <ul>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>©2024 | Desarrollado por <a href="#">K.N.O.S.A.</a></p>
+        </div>
+    </footer>
+</body> 
