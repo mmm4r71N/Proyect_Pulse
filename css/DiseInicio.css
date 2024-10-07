@@ -245,8 +245,8 @@ p {
   flex-direction: column; /* alinear los elementos en columna */
   justify-content:center; /* centrar los elementos verticalmente */
   align-items: center; /* centrar los elementos horizontalmente */
-  padding: 50px;
-  margin-bottom: 30px;
+  padding: 60px;
+  margin-bottom: 10px;
 }
 
 .seccion-inscripcion h2 {

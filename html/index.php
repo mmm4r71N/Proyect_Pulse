@@ -59,7 +59,7 @@
             <div class="testimonio">
                 <div class="stars">★★★★★</div>
                 <p>Muchísimas gracias por el CV, gracias a ustedes pude conseguir empleo para poder salir adelante con mi familia, muchísimas gracias, son unos genios, se los re agradezco.</p>
-                <span>- Why so serious</span>
+                <span>- Gaetan Eduardo</span>
             </div>
         </section>
         
