@@ -27,7 +27,7 @@
 
             <input type="submit" value="Continuar" class="radio-buttons" name="submit">
 
-            <p>No estás registrado? <a href="index.php">Crear cuenta</a></p>
+            <p>No estás registrado? <a href="seleccionregisto.php">Crear cuenta</a></p>
             <p>Perdiste la contraseña? <a href="recuperarcontra.php">Recuperar contraseña</a></p>
         </form>
     </div>
